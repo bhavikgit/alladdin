@@ -11,6 +11,13 @@ default: &default
 
 development:
   <<: *default
+  host: db.dev.housing.com
+  schema_search_path: "public,postgis"
+  script_dir: "/usr/pgsql-9.2/share/contrib/postgis-2.0"
+  username: housing
+  password: housing
+  su_username: housing_su
+  su_password: housing
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and

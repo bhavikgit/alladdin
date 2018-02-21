@@ -1,3 +1,5 @@
 module FiltersHelper
-	## module for processing the filters
+  ## module for processing the filters
+  include FilterDictionaryHelper
+  
 end
