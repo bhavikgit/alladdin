@@ -1,4 +1,4 @@
-
+<canvas class="visualizer"></canvas>
 <h1 class="center" id="headline">
   <a href="http://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">
     Web Speech API</a> Demonstration</h1>
@@ -28,6 +28,8 @@
   <span id="final_span" class="final"></span>
   <span id="interim_span" class="interim"></span>
   <p>
+    <audio id="audio-element"/>
+  </p>
 </div>
 <div class="center">
   <div class="sidebyside" style="text-align:right">
@@ -266,6 +268,8 @@ function get_last_search_session(){
     }else{
       return last_session;
     }
+  }else{
+    return false;
   }
 }
 
@@ -289,11 +293,11 @@ var SearchSession = function(text){
   this.add_text(text);
 }
 
-SearchSession.prototype.is_finished(){
+SearchSession.prototype.is_finished = function(){
   return this.finished;
 }
 
-SearchSession.prototype.finish_session(){
+SearchSession.prototype.finish_session = function(){
   this.finished = true;
 }
 
