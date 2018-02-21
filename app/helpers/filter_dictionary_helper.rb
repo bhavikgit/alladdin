@@ -8,7 +8,7 @@ module FilterDictionaryHelper
   }
 
   ## see this and confirm
-  MAKKAN_BHK_FILTERS = {
+  MAKAAN_BHK_FILTERS = {
     "1 RK" => 1,
     "2 BHK" => 2,
     "3 BHK" => 3,
@@ -27,7 +27,7 @@ module FilterDictionaryHelper
   }
 
   ## see this and confirm
-  MAKKAN_PROPERTY_TYPE = {
+  MAKAAN_PROPERTY_TYPE = {
     "apartment" => 1,
     "villa" => 2, 
     "floor" => 6,
