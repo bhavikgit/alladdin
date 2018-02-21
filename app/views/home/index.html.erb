@@ -338,6 +338,10 @@ SearchSession.prototype.get_results = function(){
   });
 }
 
+SearchSession.prototype.display_results = function(results){
+  console.log(results);
+}
+
 $("#audio-element")[0].addEventListener("ended", function(){
   if(on_audio_ended_event){
     on_audio_ended_event();
