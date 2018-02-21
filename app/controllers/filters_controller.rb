@@ -2,32 +2,34 @@ class FiltersController < ApplicationController
   include FiltersHelper
 
   ## handling api related filters
-  VALID_KEYWORDS = ["buy","rent"]
+  MANDATORY_KEYWORDS = ["buy","rent"]
   #  skipping statement interpretation incase of to for 2 of 2BHK
-  PRE_MAP_SET = {"bedroom"=>"room","bhk"=>"room","kamara"=>"room","two"=>2,"one"=>1,"three"=>3,"teen"=>3,"purchase"=>"buy","onrent"=>"rent","plat"=>"plot","jameen"=>"plot","independent"=>"independent_house"}
+  PRE_MAP_SET = {"bedroom"=>"room","bhk"=>"room","kamara"=>"room","two"=>2,"one"=>1,"three"=>3,"teen"=>3,"four"=>4,"chaar"=>4,"five"=>5,"six"=>6,"seven"=>7,"eight"=>8,"nine"=>9,"ten"=>10,"purchase"=>"buy","onrent"=>"rent","plat"=>"plot","jameen"=>"plot","independent"=>"independent_house"}
   LANDMARK_KEYWORDS = ["near","opposite","opp","" ]
 
   def get_text
     puts "params present: #{params[:user_text]}"
     puts "request body #{request.body}"
     input_text = params[:user_text]
-    keyword_list,list,hall,room_count = normalize(input_text)
+    mandate_keyword_list,list,hall,room_count = normalize(input_text)
     result = {:message=>"",:data=>""}
-
-    if keyword_list.empty?
-      result[:message] = {"message"=>"do you want to buy the property or rent out"}
+    if mandate_keyword_list.empty?
+      result[:message] = {"message"=>"hey, do you want to buy the property OR, rent out?"}
     else
-      if hall == true
+      if list.index("plot")
+        apartment_type = "Plot"
+      elsif hall == true || room_count.to_i > 1
+        room_count =  room_count.to_i > 3 ? "3+" : room_count
         apartment_type = room_count.to_s + " BHK"
       end
-      result[:data] = {:raw_input=>list,:apartment=>apartment_type}
+      result[:data] = {:raw_input=>list,:apartment=>apartment_type,:service_type=>mandate_keyword_list.first}
     end
     render :json=>result.to_json
     # identify the keywords and hit one method to check if it has mandatory filters
   end
 
   def normalize(str)
-    input_array = str.gsub(/[,;.]/," ").split(" ")
+    input_array = str.gsub(/[,;.]/," ").split(" ").collect(&:downcase)
     keyword_list = []
     list = []
     hall = false
@@ -36,7 +38,7 @@ class FiltersController < ApplicationController
       hall = true if (str.downcase == "bhk" || str.downcase =="hall")
     end
     room_count = identify_room_count(input_array)
-    keyword_list = VALID_KEYWORDS & input_array
+    keyword_list = MANDATORY_KEYWORDS & input_array
     return [keyword_list,input_array,hall,room_count]
   end
 
