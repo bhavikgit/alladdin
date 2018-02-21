@@ -3,6 +3,10 @@ module FiltersHelper
   include FilterDictionaryHelper
   require "csv"
 
+  INDEX_NAME = "polygon_index"
+  INDEX_TYPE = "polygons"
+
+
 
   def polygons_filter(text)
     localities_data, cities_data = [], []
@@ -16,17 +20,15 @@ module FiltersHelper
   end
 
   def get_relevant_polygons(text)
-    url = "http://es.burrow.io/polygon_index/polygons/_search"
-    query = get_es_query(text)
     localities_data, cities_data = [], []
-    ## need to test this once
-    status_code, results = ExternalApiHelper.post_api_call('get', url, query, nil, false)
-    if status_code != 200
+
+    query = get_es_query(text)
+    poly_results = get_poly_results_from_es(query)
+    
+    hits = poly_results["hits"]["hits"]
+    if hits.empty?
       return localities_data, cities_data
     else
-      results = JSON.parse(results)
-      hits = results["hits"]["hits"]
-      localities_data, cities_data = [], []
       hits.each do |hit|
         hit = hit["_source"]
         required_data = hit.slice("name", "uuid", "city_uuid")
@@ -47,6 +49,11 @@ module FiltersHelper
         }
       }
     }.to_json
+  end
+
+  def get_poly_results_from_es(query)
+    client = ExternalApiHelper.get_client
+    return ExternalApiHelper.get_results_from_es(client, INDEX_NAME, INDEX_TYPE, query)
   end
 
   def apartment_type_filter(apartment_type)
