@@ -1,3 +1,3 @@
-class FilterDictionaryHelper
-   
+module FilterDictionaryHelper
+
 end
