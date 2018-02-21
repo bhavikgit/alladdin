@@ -16,4 +16,18 @@ module FiltersHelper
     return localities_data.uniq, cities_data.uniq
   end
 
+  def apartment_type_filter(apartment_type)
+    apartment_type_hash = {}
+    apartment_type_hash["housing"] = FilterDictionaryHelper::HOUSING_BHK_FILTERS[apartment_type]
+    apartment_type_hash["makaan"] = FilterDictionaryHelper::MAKKAN_BHK_FILTERS[apartment_type]
+    return apartment_type_hash
+  end
+
+  def property_type_filter(property_type)
+    property_type_hash = {}
+    property_type_hash["housing"] = FilterDictionaryHelper::HOUSING_PROPERTY_TYPE[property_type]
+    property_type_hash["makaan"] = FilterDictionaryHelper::MAKKAN_PROPERTY_TYPE[property_type]
+    return property_type_hash
+  end
+
 end
