@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   get "/index" => "home#index"
 
-  post "/post_text" => "filter#get_text"
+  post "/post_text" => "filters#get_text"
 end
