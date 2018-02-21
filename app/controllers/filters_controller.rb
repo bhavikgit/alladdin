@@ -30,4 +30,25 @@ class FiltersController < ApplicationController
   def landmark_lookup(input_string)
      # scan the input string and find the landmark using landmark_keyword and then hit the api to get the lat, lon then get the hit housing region api to identify the locality
   end
+
+
+
+  private
+
+
+  def identify_room_count(token_array)
+  	room_index = token_array.index('room')
+  	room_count = 0
+  	# finding room numbers prior to 'room' keyword
+  	if room_index
+		for i in (0..room_index-1)
+	   		if token_array[i].to_i >= 1
+	   			room_count = token_array[i]
+	   			break
+	   		end
+		end
+  	end
+	room_count
+  end
+
 end
