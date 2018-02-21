@@ -16,7 +16,7 @@ module FiltersHelper
   end
 
   def get_relevant_polygons(text)
-    url = "http://es.burrow.io/polygon_index/polygons"
+    url = "http://es.burrow.io/polygon_index/polygons/_search"
     query = get_es_query(text)
     localities_data, cities_data = [], []
     ## need to test this once
@@ -24,11 +24,13 @@ module FiltersHelper
     if status_code != 200
       return localities_data, cities_data
     else
+      results = JSON.parse(results)
       hits = results["hits"]["hits"]
       localities_data, cities_data = [], []
       hits.each do |hit|
+        hit = hit["_source"]
         required_data = hit.slice("name", "uuid", "city_uuid")
-       (hit["city_uuid"].empty? or hit["uuid"] == hit["city_uuid"]) ? cities_data << required_data : localities_data << required_data
+       (hit["city_uuid"].nil? or hit["uuid"] == hit["city_uuid"]) ? cities_data << required_data : localities_data << required_data
       end
       return localities_data, cities_data 
     end
@@ -43,6 +45,7 @@ module FiltersHelper
             "fuzziness" => "auto"
           }
         }
+      }
     }.to_json
   end
 
