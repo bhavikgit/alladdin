@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
 
   get "/index" => "home#index"
+
+  post "/post_text" => "filter#get_text"
 end
