@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  #get '/testing' => 'home#test'
+  get '/testing' => 'home#test'
 
   post '/post_text' => 'filter#get_text'
 
-  # https://github.com/pndurette/gTTS
+  get '/test/api' => 'dummy#fetch_results'
 end
