@@ -34,6 +34,9 @@ class FiltersController < ApplicationController
     end
     result[:original_text] = original_text
     result[:location_tokens] = location_tokens
+    limit= max_amount(original_text)
+
+    result[:upper_limit] = limit
     render :json=>result.to_json
     # identify the keywords and hit one method to check if it has mandatory filters
   end
@@ -66,6 +69,7 @@ class FiltersController < ApplicationController
     end
     location_tokens = input_array - identified_words - STOP_WORDS_DICT
     room_count = identify_room_count(input_array)
+
     # keyword_list = MANDATORY_KEYWORDS & input_array
     return [keyword_list,input_array,hall,room_count,property_type_found,location_tokens]
   end
@@ -92,6 +96,47 @@ class FiltersController < ApplicationController
 		end
   	end
 	room_count
+  end
+
+  def max_amount(input_text)
+    input_array = input_text.gsub(/[,;.]/," ").split(" ").collect(&:downcase)
+    max_limit = 0
+    max_so_far = 0
+    literals = {"hundered"=>100,"thousand"=>1000,"thousands"=>1000,"lac"=>100000,"lacs"=>100000,"lakh"=>100000,"lakhs"=>100000,"crore"=>10000000,"crores"=>10000000,"million"=>1000000,"millions"=>1000000}
+    numbers = {"ninety"=>90, "eighty"=>80, "seventy"=>70, "sixty"=>60, "fifty"=>50, "forty"=>40, "thirty"=>30, "twenty"=>20, "nineteen"=>19, "eighteen"=>18, "seventeen"=>17, "sixteen"=>16, "fifteen"=>15, "fourteen"=>14, "thirteen"=>13, "twelve"=>12, "eleven"=>11, "ten"=>10, "nine"=>9, "eight"=>8, "seven"=>7, "six"=>6, "five"=>5, "four"=>4, "three"=>3, "two"=>2, "one"=>1}
+    sum = 0
+    sub_sum = 0
+    mul = 1
+    hundered_index= thousand_index= lakh_index= crore_index= million_index = nil
+    input_array.each_with_index do |token,i|
+      hundered_index = i if literals[token] && token == "hundered"
+      thousand_index = i if literals[token] && (token == "thousand" || token == "thousands")
+      lakh_index = i if literals[token] && (token == "lac" || token == "lacs" || token == "lakh" || token == "lakhs")
+      crore_index = i if literals[token] && (token == "crore" || token == "crores")
+      million_index = i if literals[token] && (token == "million" || token == "millions")
+      max_limit = token.to_i
+      if(max_limit > max_so_far)
+         max_so_far = max_limit
+      end
+    end
+    @literals_array = literals.keys
+    sum = (partial_sum(input_array,hundered_index,numbers,100) +  partial_sum(input_array,thousand_index,numbers,1000) + partial_sum(input_array,lakh_index,numbers, 100000)+ partial_sum(input_array,million_index,numbers, 1000000)+partial_sum(input_array,crore_index,numbers, 10000000) )
+    return max_so_far > sum ? max_so_far : sum
+  end
+
+  def partial_sum(input_array,index,numbers, mul)
+    sum = 0.0
+    if index.present?
+        digit_1 = digit_2 = digit_3 = 0
+        (1..3).each do |i|
+            break if @literals_array.include?(input_array[index-i])
+            eval("digit_#{i} = #{input_array[index-i].to_i}") if input_array[index-i].to_i > 0
+            sum = eval(" #{sum} + #{numbers[input_array[index-i]]}") if (index - i ) >=0 && numbers[input_array[index-i]]
+        end
+        sum = sum + digit_1 + digit_2 + digit_3
+        sum = sum * mul
+    end
+    return sum
   end
 
 end
