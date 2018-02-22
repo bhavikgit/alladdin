@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   post '/post_text' => 'filter#get_text'
 
   get '/test/api' => 'dummy#fetch_results'
+
+  get '/testing' => 'home#test'
+  get '/design' => 'home#design'
 end

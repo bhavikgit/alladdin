@@ -1,34 +1,16 @@
-<div class="audio-control">
+
     <p id="audio-control" class="white-circle">
-        <img src="lex.png">
-        <canvas class="visualizer"></canvas>
+      <canvas class="visualizer"></canvas>
     </p>
-    <p><span id="message"></span></p>
-    <p>
-        <input type="password" id="ACCESS_ID" name="ACCESS ID" placeholder="ACCESS ID" value=""/>
-    </p>
-    <p>
-        <input type="password" id="SECRET_KEY" name="SECRET KEY" placeholder="SECRET KEY" value=""/>
-    </p>
-    <p>
-        <input type="text" id="BOT" name="BOT" placeholder="BOT" value=""/>
-    </p>
-</div>
 <%= content_for :end_js do %>
   <script type="text/javascript">
     var waveform = window.Waveform();
-    var message = document.getElementById('message');
     var config, conversation;
-    message.textContent = 'Passive';
     document.getElementById('audio-control').onclick = function () {
-      AWS.config.credentials = new AWS.Credentials("AKIAJ4GCVZOQZJSW6ZJA", "J0ZFJ//zPu/B0pRbE4bf93bBuuQ1YXRfWTtBzmdx", null);
-      AWS.config.region = 'us-east-1';
-      
       config = {
         lexConfig: { botName: "alladdin" }
       };
       conversation = new LexAudio.conversation(config, function (state) {
-        message.textContent = state + '...';
         if (state === 'Listening') {
           waveform.prepCanvas();
         }
@@ -38,11 +20,73 @@
       }, function (data) {
         console.log('Transcript: ', data.inputTranscript, ", Response: ", data.message);
       }, function (error) {
-        message.textContent = error;
       }, function (timeDomain, bufferLength) {
         waveform.visualizeAudioBuffer(timeDomain, bufferLength);
       });
       conversation.advanceConversation();
     };
+
+
+
+    var SearchSession = function(text){
+      this.started = true;
+      this.texts = [];
+      this.finished = false;
+      this.add_text(text);
+    }
+
+    SearchSession.prototype.is_finished = function(){
+      return this.finished;
+    }
+
+    SearchSession.prototype.finish_session = function(){
+      this.finished = true;
+    }
+
+    SearchSession.prototype.add_text = function(text){
+      this.texts.push(text);
+    }
+
+    SearchSession.prototype.get_combined_text = function(){
+      var whole_text = "";
+      var search_session = this;
+      $.each(search_session.texts, function(){
+        var text = this;
+        whole_text += " " + text;
+      });
+      return whole_text;
+    }
+
+    var get_results_inx = 1;
+    SearchSession.prototype.get_results = function(){
+      var results = false;
+      if(get_results_inx == 3){
+        results = true;
+      }
+      get_results_inx = get_results_inx + 1;
+      var search_session = this;
+      $.ajax({
+        url: 'http://localhost:3000/test/api',
+        data: {'text' : search_session.get_combined_text(), 'results' : results},
+        type: 'get',
+        success: function(ret_data){
+          if(ret_data.status == "missing_fields"){
+            search_session.play_sound(ret_data.sound_file_to_play, function(){
+              $("#audio-marker").hide();
+            });
+          }else{
+            search_session.play_sound(ret_data.sound_file_to_play, function(){
+              $("#audio-marker").hide();
+              search_session.display_results(ret_data.results);
+              search_session.finish_session();
+            });
+          }
+        }
+      });
+    }
+
+    SearchSession.prototype.display_results = function(results){
+      console.log(results);
+    }
   </script>
 <% end %>

@@ -1,0 +1,234 @@
+<style type="text/css">
+  .message-box{
+    width: 500px;
+    border: 1px solid #aeaeae;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .message-inner .user-message{
+    border: 1px solid #aeaeae;
+    margin-left: -20px;
+    display: inline-block;
+    width: 100%;
+  }
+  .message-inner .system-message{
+    border: 1px solid #aeaeae;
+    margin-right: -20px;
+    display: inline-block;
+    width: 100%;
+  }
+</style>
+<div class="message-box">
+  <div class="message-inner">
+    
+  </div>
+  <div class="template" style="display: none;">
+    <div class="user-message">
+    </div>
+    <div class="system-message">
+    </div>
+  </div>
+</div>
+<canvas class="visualizer"></canvas>
+<p>
+  <audio id="audio-element"/>
+</p>
+<%= image_tag "sound_wav.gif", id: "audio-marker", style: "display: none;" %>
+<%= content_for :end_js do %>
+  <script type="text/javascript">
+    var on_audio_ended_event;
+    var SearchSession = function(){
+      this.started = true;
+      this.texts = [];
+      this.finished = false;
+      this.speaking = false;
+      this.$new_msg = $(".template .user-message").clone();
+      $(".message-box .message-inner").append(this.$new_msg);
+      this.init_voice_recognition();
+    }
+
+    SearchSession.prototype.is_finished = function(){
+      return this.finished;
+    }
+
+    SearchSession.prototype.finish_session = function(){
+      this.finished = true;
+    }
+
+    SearchSession.prototype.add_text = function(text){
+      this.texts.push(text);
+      console.log(text);
+      this.$new_msg.html(text);
+    }
+
+    SearchSession.prototype.add_system_text = function(text){
+      var $sys_message = $(".template .system-message").clone();
+      $sys_message.html(text);
+      $(".message-box .message-inner").append($sys_message);
+    }
+
+    SearchSession.prototype.get_combined_text = function(){
+      var whole_text = "";
+      var search_session = this;
+      $.each(search_session.texts, function(){
+        var text = this;
+        whole_text += " " + text;
+      });
+      return whole_text;
+    }
+    var get_results_inx = 1;
+    var dot_count = 0;
+    var dot_interval;
+    SearchSession.prototype.get_results = function(){
+      var results = false;
+      if(get_results_inx == 3){
+        results = true;
+      }
+      get_results_inx = get_results_inx + 1;
+      var search_session = this;
+      $.ajax({
+        url: 'http://localhost:3000/test/api',
+        data: {'text' : search_session.get_combined_text(), 'results' : results},
+        type: 'get',
+        success: function(ret_data){
+          if(ret_data.status == "missing_fields"){
+            search_session.add_system_text("Some of the fields are missing");
+            search_session.play_sound(ret_data.sound_file_to_play, function(){
+              $("#audio-marker").hide();
+              search_session.$new_msg = $(".template .user-message").clone();
+              $(".message-box .message-inner").append(search_session.$new_msg);
+              
+              search_session.$new_msg.html("Listenining...");
+              // set_dot_interval(search_session);
+              search_session.init_voice_recognition();
+              search_session.start_voice_recognition();
+            });
+          }else{
+            search_session.play_sound(ret_data.sound_file_to_play, function(){
+              $("#audio-marker").hide();
+              search_session.$new_msg = $(".template .user-message").clone();
+              //$(".message-box .message-inner").append(search_session.$new_msg);
+              // set_dot_interval(search_session);
+              //search_session.$new_msg.html("Listenining...");
+              search_session.display_results(ret_data.results);
+              search_session.finish_session();
+            });
+          }
+        }
+      });
+    }
+
+    function set_dot_interval(search_session){
+      dot_interval = setInterval(
+        function(){
+          if(!search_session.speaking){
+            var str = "";
+            var i;
+            for(i=0;i<=dot_count; i++){
+              str = str + "."
+            }
+            search_session.$new_msg.html("Listenining" + str);
+            dot_count = (dot_count + 1) % 4;
+          }
+        }, 500
+      );
+    }
+
+    SearchSession.prototype.display_results = function(results){
+      console.log(results);
+    }
+
+    SearchSession.prototype.play_sound = function(sound_file_to_play, callback){
+      var audio_element = $("#audio-element").attr("src", sound_file_to_play);
+      $("#audio-marker").show();
+      audio_element[0].play();
+      on_audio_ended_event = callback;
+    }
+
+    SearchSession.prototype.init_voice_recognition = function(){
+      var search_session = this;
+      search_session.speaking = true;
+      if(dot_interval){
+        dot_interval.clear();
+      }
+      search_session.recognizing = false;
+      search_session.ignore_onend = false;
+      search_session.final_transcript = "";
+      search_session.recognition = new webkitSpeechRecognition();
+      search_session.recognition.continuous = true;
+      search_session.recognition.interimResults = true;
+      search_session.recognition.onstart = function() {
+        search_session.recognizing = true;
+        search_session.$new_msg.html("Listenining...");
+        // set_dot_interval(search_session);
+      };
+      search_session.recognition.onerror = function(event) {
+        search_session.ignore_onend = true;
+      }
+      search_session.recognition.onend = function() {
+        search_session.recognizing = false;
+        if (search_session.ignore_onend) {
+          return;
+        }
+        if (window.getSelection) {
+          window.getSelection().removeAllRanges();
+          var range = document.createRange();
+          //range.selectNode(document.getElementById('final_span'));
+          //range.selectNode($(".message-box .message-inner .user-message").last()[0]);
+          //window.getSelection().addRange(range);
+        }
+      }
+
+      search_session.recognition.onresult = function(event) {
+        var transcript = '';
+        //$(".visualizer").show();
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+
+          console.log(event.results[i].isFinal);
+          if (event.results[i].isFinal) {
+            search_session.speaking = false;
+            search_session.add_text(event.results[i][0].transcript);
+            search_session.get_results();
+            //transcript += event.results[i][0].transcript;
+          } else {
+            transcript += event.results[i][0].transcript;
+            //search_session.append_text(event.results[i][0].transcript);
+          }
+        }
+      }
+    }
+
+    SearchSession.prototype.start_voice_recognition = function(){
+      if (this.recognizing) {
+        this.recognition.stop();
+        return;
+      }
+      final_transcript = '';
+      this.recognition.start();
+      this.ignore_onend = false;
+    }
+
+    if (!('webkitSpeechRecognition' in window)) {
+      //upgrade();
+    }else{
+      if(window.search_sessions == undefined){
+        window.search_sessions = [];
+      }
+      var last_search_session;
+      if(window.search_sessions.length != 0){
+        last_search_session = window.search_sessions[window.search_sessions.length - 1]
+      }else{
+        last_search_session = new SearchSession();
+        last_search_session.start_voice_recognition();
+      }
+    }
+
+    $("#audio-element")[0].addEventListener("ended", function(){
+      if(on_audio_ended_event){
+        on_audio_ended_event();
+      }
+    });
+  </script>
+<% end %>

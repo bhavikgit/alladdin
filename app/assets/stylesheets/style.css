@@ -19,7 +19,7 @@
     
     .audio-control {
         position: fixed;
-        top: 50%;
+        bottom: 10px;
         left: 50%;
         margin-top: -50px;
         margin-left: -50px;

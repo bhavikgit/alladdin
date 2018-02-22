@@ -252,18 +252,18 @@
     this.onAudioData = onAudioData || function() { /* no op */ };
 
     // Validate input.
-    if (!this.config.lexConfig.botName) {
-      this.onError('A Bot name must be provided.');
-      return;
-    }
-    if (!AWS.config.credentials) {
-      this.onError('AWS Credentials must be provided.');
-      return;
-    }
-    if (!AWS.config.region) {
-      this.onError('A Region value must be provided.');
-      return;
-    }
+    // if (!this.config.lexConfig.botName) {
+    //   this.onError('A Bot name must be provided.');
+    //   return;
+    // }
+    // if (!AWS.config.credentials) {
+    //   this.onError('AWS Credentials must be provided.');
+    //   return;
+    // }
+    // if (!AWS.config.region) {
+    //   this.onError('A Region value must be provided.');
+    //   return;
+    // }
 
     lexruntime = new AWS.LexRuntime();
 
@@ -346,6 +346,7 @@
     this.advanceConversation = function() {
       state.lexConfig.inputStream = state.audioInput;
       lexruntime.postContent(state.lexConfig, function(err, data) {
+        console.log(data);
         if (err) {
           state.onError(err);
           state.transition(new Initial(state));

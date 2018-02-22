@@ -6,4 +6,8 @@ class HomeController < ApplicationController
 
   def test
   end
+
+
+  def design
+  end
 end
