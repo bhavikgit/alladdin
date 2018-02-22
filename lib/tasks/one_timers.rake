@@ -1,9 +1,11 @@
 namespace :one_timers do
   require "csv"
 
+  URL = "http://localhost:9200"
+
 	desc "create index with mapping on our local system"
 	task :create_index_with_mapping => :environment do
-    url = "http://es.burrow.io/polygon_index"
+    url = "#{URL}/polygon_index"
     post_args = {
       "settings" => {
         "number_of_shards" => 1
@@ -29,7 +31,7 @@ namespace :one_timers do
 
   desc "add data in our index"
   task :add_data_in_index => :environment do
-    url = "http://es.burrow.io/polygon_index/polygons"
+    url = "#{URL}/polygon_index/polygons"
     count = 1
     CSV.foreach("tmp/polygons_data_dump.csv", headers: true) do |row|
       #if count >= 2 break
@@ -46,7 +48,7 @@ namespace :one_timers do
   desc "add data in our index"
   task :add_data_in_index_json => :environment do
     count = 0
-    url = "http://es.burrow.io/polygon_index/polygons/_bulk"
+    url = "#{URL}/polygon_index/polygons/_bulk"
     csv = CSV.read("tmp/polygons_data_dump.csv", headers: true)
     csv.each_slice(1000) do |batch|
       data = ""
@@ -67,7 +69,7 @@ namespace :one_timers do
 
   desc "delete index"
   task :delete_index => :environment do
-    url = "http://es.burrow.io/polygon_index"
+    url = "#{URL}/polygon_index"
     ExternalApiHelper.post_api_call('delete', url, {}.to_json, nil, false)
   end
 
