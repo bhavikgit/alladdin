@@ -56,11 +56,12 @@ module FiltersHelper
     return ExternalApiHelper.get_results_from_es(client, INDEX_NAME, INDEX_TYPE, query)
   end
 
-  def get_city_uuid(words)
+  def get_filter_poly_uuids(words)
     localities_data, cities_data = get_relevant_polygons(words)
     locality_city_uuids = localities_data.map {|locality| locality["city_uuid"]}
     city_uuids = cities_data.map {|city| city["uuid"]}
-    locality_city_uuids.max_by { |i| locality_city_uuids.count(i) } || city_uuids.max_by { |i| city_uuids.count(i) } 
+    city_uuid = locality_city_uuids.max_by { |i| locality_city_uuids.count(i) } || city_uuids.max_by { |i| city_uuids.count(i) } 
+    return localities_data, city_uuid
   end
 
   def apartment_type_filter(apartment_type)
