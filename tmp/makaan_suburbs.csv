@@ -1,0 +1,1334 @@
+SUBURB_ID,LABEL
+11317,"Aerocity Road"
+10123,"Agra Central"
+10323,"Agra North"
+10335,"Agra South"
+11206,"Agra West"
+10237,"Ahmedabad Central"
+10221,"Ahmedabad East"
+10226,"Ahmedabad North"
+10228,"Ahmedabad South"
+10229,"Ahmedabad West"
+11081,"Ahmednagar Central"
+11082,"Ahmednagar East"
+11084,"Ahmednagar North"
+11085,"Ahmednagar South"
+11083,"Ahmednagar West"
+11074,"Air Force Station Dadri"
+11178,"Airport Road"
+10986,"Ajmer Central"
+10987,"Ajmer East"
+10989,"Ajmer North"
+10990,"Ajmer South"
+10988,"Ajmer West"
+11339,"Akola East"
+11334,"Akola South"
+10078,Alambagh
+11066,"Alibaugh East"
+11100,"Alibaugh West"
+10453,"Aligarh Central"
+10132,"Allahabad Central"
+11208,"Allahabad East"
+10412,"Allahabad North"
+10430,"Almora South"
+10429,"Almora West"
+10156,"Alwar Central"
+10222,"Alwar Central"
+10439,"Alwar North"
+11036,"Alwar South"
+11035,"Alwar West"
+11455,"Ambala Cantt"
+10154,"Ambala Central"
+11196,"Ambala Chandigarh Expressway NH 152 "
+11318,"Ambala Chandigarh Expressway NH 152"
+11315,"Ambala Chandigarh Expressway NH 152"
+11302,"Ambala North"
+11438,"Ambala Sadar"
+11430,"Amravati East"
+10148,"Amritsar Central"
+10119,"Anand Central"
+10356,"Anand West"
+10168,"Anantapura South"
+10042,"Andheri to Dahisar"
+10304,"Arambagh Central"
+10349,"Arambagh East"
+11478,"Arcot Road  Saligramam"
+11160,"Asansol Central"
+11161,"Asansol East"
+11163,"Asansol North"
+11164,"Asansol South"
+11162,"Asansol West"
+11217,"Athens North"
+11480,"Aundh Road Pimple Nilakh"
+10139,"Aurangabad Central"
+11238,"Aurangbad East"
+11246,"Aurangbad North"
+10655,"Aurangbad West"
+11373,"Bagru Central"
+10381,Bahadurgarh
+11107,"Bahadurgarh Central"
+11108,"Bahadurgarh East"
+11110,"Bahadurgarh North"
+11111,"Bahadurgarh South"
+11109,"Bahadurgarh West"
+10081,"Bakeri City"
+11125,"Balasore Central"
+11123,"Balasore East"
+11126,"Balasore North"
+11127,"Balasore South"
+11124,"Balasore West"
+10206,Ballabhgarh
+10006,"Bangalore Central"
+10007,"Bangalore East"
+10008,"Bangalore North"
+10011,"Bangalore South"
+10010,"Bangalore West"
+10383,"Bannerghatta Road"
+11181,"Banur Highway"
+10474,Barabanki
+11489,Bardez
+10422,"Bareilly Central"
+10423,"Bareilly East"
+10425,"Bareilly North"
+10426,"Bareilly South"
+10424,"Bareilly West"
+11307,"Bathinda West"
+11295,Beawar
+11338,"Beed West"
+10166,Behror
+11195,"Belagavi Central"
+11194,"Belagavi North"
+10175,"Beyond Panvel"
+10191,"Beyond Sector 50"
+10043,"Beyond Thane"
+11128,"Bhadrak Central"
+11129,"Bhadrak East"
+11131,"Bhadrak North"
+11132,"Bhadrak South"
+11130,"Bhadrak West"
+10477,"Bharuch Central"
+10478,"Bharuch South"
+10472,"Bhavnagar South"
+11469,Bhilai
+11470,"Bhilai Nagar"
+11233,"Bhilwara North"
+10317,Bhiwadi
+10979,"Bhiwadi Chopanki Road"
+10110,"Bhopal Central"
+10337,"Bhopal East"
+10329,"Bhopal North"
+10305,"Bhopal South"
+10334,"Bhopal West"
+10072,Bhopura
+10552,"Bhubaneshwar East"
+10108,"Bhubaneswar Central"
+10308,"Bhubaneswar North"
+10311,"Bhubaneswar South"
+10344,"Bhubaneswar West"
+11204,"Bikaner East"
+11205,"Bikaner North"
+11341,"Bikaner South"
+11304,"Bokaro South"
+10542,Bolpur
+10981,"Bolpur North"
+11266,"Bolpur West"
+10416,Brahmapur
+11454,Budanpur
+10397,"Bulandshahr South"
+11254,"Burdwan Central"
+10486,"Burdwan North"
+10127,"Calicut Central"
+10555,"Calicut East"
+10492,"Calicut North"
+10364,"Calicut South"
+10040,"Central Mumbai"
+11032,"Chamarajanagar Central"
+11030,"Chamarajanagar East"
+11033,"Chamarajanagar North"
+11034,"Chamarajanagar South"
+11031,"Chamarajanagar West"
+11314,"Chandigarh Ambala Road"
+10264,"Chennai Bypass Road"
+10202,"Chennai Central"
+10013,"Chennai North"
+10016,"Chennai South"
+10260,"Chennai Thiruthani Highway"
+10015,"Chennai West"
+10519,"Chikkamagaluru Central"
+10520,"Chikkamagaluru East"
+10522,"Chikkamagaluru North"
+10523,"Chikkamagaluru South"
+10521,"Chikkamagaluru West"
+11063,"Chitradurga Central"
+11064,"Chitradurga East"
+11062,"Chitradurga North"
+11061,"Chitradurga South"
+11065,"Chitradurga West"
+11222,"Chittoor South"
+10103,"Coimbatore Central"
+10301,"Coimbatore East"
+10348,"Coimbatore North"
+10389,"Coimbatore South"
+10400,"Coimbatore West"
+11022,"Coorg Central"
+11023,"Coorg East"
+11025,"Coorg North"
+11026,"Coorg South"
+11024,"Coorg West"
+10999,"Cuddalore Central"
+11000,"Cuddalore East"
+11003,"Cuddalore North"
+11002,"Cuddalore South"
+11001,"Cuddalore West"
+11091,"Cuttack Central"
+11092,"Cuttack East"
+11094,"Cuttack North"
+11095,"Cuttack South"
+11093,"Cuttack West"
+10303,"Dadri Road"
+11075,"Dadri Surajpur Chhalera Road"
+10541,"Dakshina Kannada"
+10481,"Dausa Central"
+11146,Deeghot
+10113,"Dehradun Central"
+11311,"Dehradun East"
+10320,"Dehradun North"
+11297,"Dehradun Road"
+10357,"Dehradun South"
+11342,"Dehu Alandi Road"
+10018,"Delhi Central"
+10019,"Delhi East"
+11173,"Delhi Jaipur Road"
+10558,"Delhi North"
+10022,"Delhi South"
+10017,"Delhi to Dwarka"
+10559,"Delhi West"
+11049,"Dharmapuri Central"
+11050,"Dharmapuri East"
+11052,"Dharmapuri North"
+11053,"Dharmapuri South"
+11051,"Dharmapuri West"
+10172,Dharuhera
+10527,Dharwad
+11482,"Diamond Harbour Road Thakurpukur"
+10992,"Dibrugarh Central"
+10993,"Dibrugarh East"
+10995,"Dibrugarh North"
+10996,"Dibrugarh South"
+10994,"Dibrugarh West"
+10428,"Dindigul South"
+10324,"Dindigul West"
+10402,"Dubai Central"
+10449,"Dubai East"
+10403,"Dubai North"
+10354,"Dubai South"
+10864,"Durg Central"
+10982,"Durg East"
+10984,"Durg North"
+10985,"Durg South"
+10983,"Durg West"
+10225,"Durgapur Central"
+10518,"Durgapur North"
+10212,Dwarka
+10028,"Dwarka Expressway"
+11464,"East Bhatia Nagar"
+11017,"East Godavari Central"
+11018,"East Godavari East"
+11020,"East Godavari North"
+11021,"East Godavari South"
+11019,"East Godavari West"
+10259,ECR
+10258,"ECR Link Road"
+10530,"Edapally Panvel Hwy"
+11214,"Eluru Central"
+10223,"EM Bypass"
+10413,Ernakulam
+10302,"Ernakulam Central"
+10307,"Ernakulam North"
+10352,"Ernakulam South"
+11310,"Erode South"
+10536,"Fatehabad Central"
+10050,"FNG Expressway"
+10236,Gandhinagar
+11098,"Gandhinagar North"
+11099,"Gandhinagar South"
+10102,"Gangapur Road"
+11437,Gangwa
+10406,"Ganjam South"
+11199,Garhmukteshwar
+10188,"Ghaziabad Central"
+10104,"Goa Central"
+10287,"Goa North"
+10288,"Goa South"
+10284,"Godhra Hwy"
+10026,"Golf Course Extn Road"
+10025,"Golf Course Road"
+10084,"Gomti Nagar"
+11249,"Gorakhpur Central"
+10560,"Gr Hyderabad"
+10164,"Greater Faridabad"
+10030,"Greater Hyderabad"
+10087,"Greater Noida"
+11076,"Greater Noida Central"
+11077,"Greater Noida East"
+11078,"Greater Noida North"
+10263,GST
+10326,"Gulbarga Central"
+10336,"Gulbarga North"
+10405,"Guntur Central"
+10546,"Guntur East"
+10511,"Guntur North"
+10373,"Guntur South"
+10547,"Guntur West"
+10545,"Gurgaon Central"
+10182,"Gurgaon Faridabad Road"
+10306,"Gurgaon Gokulgarh Road"
+10140,"Guwahati Central"
+10476,"Guwahati West"
+10133,"Gwalior Central"
+10395,"Gwalior East"
+10455,"Gwalior South"
+10480,"Gwalior West"
+11316,"Haibatpur Rd"
+11483,"Hapur Road Nehru Nagar"
+11481,"Hapur Road Shastri Nagar"
+10134,"Haridwar Central"
+10394,"Haridwar South"
+10390,"Haridwar West"
+10444,"Hennur Main Road"
+11476,"Hi Tension Road"
+11319,"Highland Marg"
+11232,"Hiran Magri"
+10515,"Hisar Central"
+10367,Hodal
+11439,"Hodal Rural"
+11210,"Hooghly East"
+11331,"Hoshangabad East"
+10447,"Hosur Road"
+10438,Hubli
+10525,"Hubli Dharwad Hwy"
+10526,"Hubli Dharwad North"
+10524,"Hubli Dharwad South"
+11457,Huda
+11461,HUDA
+11459,Huda
+10234,"Hyderabad Central"
+10233,"Hyderabad East"
+10071,"Hyderabad North"
+10238,"Hyderabad South"
+10082,"Hyderabad West"
+11135,"Imphal Central"
+11133,"Imphal East"
+11136,"Imphal North"
+11137,"Imphal South"
+11134,"Imphal West"
+10067,Indirapuram
+10283,"Indore Bypass Road"
+10273,"Indore Central"
+10270,"Indore East"
+10286,"Indore North"
+10068,"Indore North to East"
+10243,"Indore South"
+10241,"Indore West"
+11453,"Industrial Hub"
+10141,"Jabalpur Central"
+10404,"Jabalpur South"
+10671,"Jabalpur West"
+11435,Jagadhri
+10208,"Jail Road"
+10105,"Jaipur Central"
+10549,"Jaipur East"
+10550,"Jaipur North"
+10300,"Jaipur South"
+10363,"Jaipur West"
+11226,"Jajpur North"
+11165,"Jalandhar North"
+10378,"Jalandhar South"
+11324,"Jalgaon Central"
+11335,"Jalgaon East"
+11431,"Jalna West"
+11293,"Jammu North"
+10149,"Jamshedpur Central"
+11179,"Jandpur Road"
+10544,"Jhajjar Central"
+10160,"Jhansi Central"
+10391,"Jhansi East"
+11253,"Jharsuguda Central"
+11180,"Jhungiyan Road"
+10142,"Jodhpur Central"
+10370,"Jodhpur North"
+10368,"Jodhpur West"
+10451,"Kanakapura Road"
+10454,"Kanakpura Road"
+10136,"Kannur Central"
+10557,"Kannur North"
+10408,"Kannur South"
+10128,"Kanpur Central"
+11200,"Kanpur Lucknow Road"
+10379,"Kanpur North"
+10285,"Kanpur Road"
+11231,"Kanpur South"
+10386,"Kanpur West"
+10215,Kapashera
+11379,"Karnal Central"
+11426,"Karnal East"
+11424,"Karnal North"
+11425,"Karnal South"
+10456,"Karnal West"
+11491,"Karoran Road"
+11004,"Karur Central"
+11005,"Karur East"
+11007,"Karur North"
+11008,"Karur South"
+11006,"Karur West"
+10217,Kaushambi
+10251,Khandala
+11184,"Kharar Road"
+11471,Khardaha
+11190,"Kheda North"
+10075,"Khokhra Circle"
+11143,"Khopoli Pali Road"
+10980,"KMP Expressway"
+11288,"KMP Expressway"
+10107,"Kochi Central"
+10371,"Kochi North"
+10553,"Kochi South"
+11292,"Kodaikanal North"
+11487,"Kodungaiyur East"
+11485,"Kodungaiyur West"
+10143,"Kolhapur Central"
+11330,"Kolhapur East"
+10532,"Kolhapur North"
+10361,"Kolhapur South"
+10235,"Kolkata Central"
+10035,"Kolkata East"
+10036,"Kolkata North"
+10038,"Kolkata South"
+10039,"Kolkata West"
+11201,"Kollam Central"
+11114,"Koraput Central"
+11112,"Koraput East"
+11115,"Koraput North"
+11116,"Koraput South"
+11113,"Koraput West"
+11299,"Kota East"
+10150,"Kottayam Central"
+10491,"Kottayam East"
+10711,"Kottayam North"
+10376,"Kottayam South"
+11197,"Kurali Chandigarh Road"
+11182,"Kurali Highway"
+11011,"Kurnool Central"
+11014,"Kurnool East"
+11012,"Kurnool North"
+11013,"Kurnool South"
+11015,"Kurnool West"
+11303,"Kurukshetra Central"
+11494,"Kushinagar West"
+11183,"Landran Road"
+10250,Lonavala
+10272,"Lucknow Central"
+10242,"Lucknow East"
+10275,"Lucknow North"
+10271,"Lucknow South"
+10297,"Lucknow West"
+10346,"Ludhiana Central"
+10360,"Ludhiana East"
+10388,"Ludhiana North"
+10382,"Ludhiana South"
+11209,"Ludhiana West"
+10120,"Madurai Central"
+10710,"Madurai East"
+10214,"Madurai North"
+10548,"Madurai South"
+10427,"Madurai West"
+11154,"Main Garhi Bolni Road"
+10543,"Mandya Bangalore Road"
+10435,"Mandya Central"
+10436,"Mandya North"
+10506,"Mandya South"
+10538,"Mandya West"
+10029,Manesar
+10115,"Mangalore Central"
+10353,"Mangalore North"
+10312,"Mangalore South"
+10540,Manipal
+10528,Manipal
+10505,Manmad
+10155,"Mathura Central"
+10401,"Mathura North"
+11101,"Mathura South"
+11202,"Mathura West"
+10129,"Meerut Central"
+10399,"Meerut East"
+10316,"Meerut North"
+11227,"Meerut South"
+10448,"Meerut West"
+10328,"Mehsana Central"
+10493,"Mehsana West"
+10211,"MG Road"
+10041,"Mira Road and Beyond"
+11188,"Mirzapur Road"
+11465,"Mithapur Extension"
+10083,Mohali
+10086,"Mohan Nagar"
+10417,"Moradabad Central"
+10418,"Moradabad East"
+10420,"Moradabad North"
+10421,"Moradabad South"
+10419,"Moradabad West"
+10279,"Mumbai Agra Road"
+10567,"Mumbai Andheri Dahisar"
+10562,"Mumbai Beyond Thane"
+10566,"Mumbai Central Line"
+10044,"Mumbai Harbour"
+10561,"Mumbai Mira Road and Beyond"
+10277,"Mumbai Nashik Expressway"
+10565,"Mumbai Navi"
+10252,"Mumbai Pune Bypass"
+10255,"Mumbai Pune Highway"
+10046,"Mumbai South"
+10564,"Mumbai South West"
+10563,"Mumbai Thane"
+10500,"Muzaffarnagar Central"
+10501,"Muzaffarnagar East"
+10503,"Muzaffarnagar North"
+10504,"Muzaffarnagar South"
+10502,"Muzaffarnagar West"
+10112,"Mysore Central"
+10556,"Mysore East"
+10295,"Mysore North"
+10450,"Mysore Road"
+10198,"Mysore Road"
+10268,"Mysore South"
+10298,"Mysore West"
+11167,"Nadia Central"
+11168,"Nadia East"
+11170,"Nadia North"
+11171,"Nadia South"
+11169,"Nadia West"
+11296,Nadiad
+10247,"Nagar Road"
+10085,"Nagpur Central"
+10291,"Nagpur East"
+10289,"Nagpur North"
+10290,"Nagpur South"
+10292,"Nagpur West"
+10144,"Nainital Central"
+10192,"Nainital East"
+10414,"Nainital West"
+11251,"Nalgonda East"
+11484,Nangainallur
+11300,"Narainpur Fatehganj Marg"
+10338,"Nashik Central"
+10392,"Nashik East"
+10282,"Nashik North"
+10278,"Nashik Pune Road"
+10173,"Nashik Road"
+10437,"Nashik South"
+10281,"Nashik West"
+11235,Nathdwara
+10045,"Navi Mumbai"
+10969,"Naya Raipur"
+10053,"Near City Center"
+10239,"Near DND"
+10197,"Near NH 24"
+10216,"Nearby HUDA Metro Station"
+10322,Neemrana
+10220,"Nehru Nagar"
+11215,"Nellore Central"
+11223,"Nellore East"
+11224,"Nellore South"
+11192,"Nellore West"
+11477,"New Airport Road"
+10080,"New Chandigarh"
+10199,"New Delhi"
+10062,"New Gurgaon"
+10330,"New Industrial Township"
+11466,"New Model Town Exyension"
+11153,"New Rohtak Jhajjar Bye Pass Road"
+10195,"NH 1"
+10181,"NH 1"
+10240,"NH 1"
+10516,"NH 10"
+10537,"NH 10"
+10267,"NH 11"
+10362,"NH 2"
+10189,"NH 2"
+10224,"NH 2"
+11145,"NH 2"
+10171,"NH 2 Close to Bypass"
+10533,"NH 204"
+11185,"NH 21"
+10167,"NH 24"
+11287,"NH 24"
+10374,"NH 47"
+11371,"NH 48"
+11186,"NH 5"
+11325,"NH 5"
+11321,"NH 5 Chandigarh Kalka Rd"
+10196,"NH 57"
+10174,"NH 58"
+10203,"NH 7"
+11421,"NH 7"
+11155,"NH 71"
+10205,"NH 8"
+11144,"NH 8"
+11156,"NH 8"
+11147,"NH 8"
+11428,"NH 8"
+10213,"NH 9"
+10350,"NH 9"
+10190,"NH 91"
+10535,"NH 91"
+10415,"NH 91"
+11079,"NH 91"
+10372,"NH 95"
+10262,NH4
+10027,NH8
+10249,"NIBM Wanowrie"
+11460,"Nirmal Vihar"
+10333,NIT
+10049,"Noida Expressway"
+10051,"Noida Extension"
+10177,"North Delhi"
+11474,"North East Delhi"
+11475,"North West Delhi"
+10441,"Old Airport Road"
+11486,"Old Delhi"
+10210,"Old Delhi Road"
+10332,"Old Faridabad"
+10975,"Old Gurgaon"
+10445,"Old Madras Road"
+10257,OMR
+10261,"OMR Bypass Road"
+10201,"Ooty East"
+10483,"Ooty South"
+10398,OotySub
+10977,"ORR North"
+10976,"ORR South"
+10179,"ORR West"
+10094,Other
+10088,Other
+10089,Other
+10571,Other
+10569,Other
+10091,Other
+10092,Other
+10098,Other
+10093,Other
+10096,Other
+10097,Other
+10095,Other
+10675,Other
+10099,Other
+10100,Other
+10101,Other
+10572,Other
+10714,Other
+10574,Other
+10665,Other
+10583,Other
+10715,Other
+10686,Other
+10642,Other
+10716,Other
+10604,Other
+10633,Other
+10598,Other
+10614,Other
+10582,Other
+10717,Other
+10677,Other
+10578,Other
+10590,Other
+10653,Other
+10589,Other
+10588,Other
+10670,Other
+10718,Other
+10595,Other
+10592,Other
+10593,Other
+10685,Other
+10576,Other
+10687,Other
+10622,Other
+10692,Other
+10616,Other
+10654,Other
+11257,Other
+10637,Other
+11245,Other
+10676,Other
+10599,Other
+10601,Other
+10594,Other
+10669,Other
+10643,Other
+10683,Other
+10667,Other
+10672,Other
+10688,Other
+10570,Other
+10719,Other
+10720,Other
+10674,Other
+10695,Other
+10579,Other
+10646,Other
+10728,Other
+10668,Other
+10650,Other
+10641,Other
+10274,Other
+10611,Other
+10597,Other
+10659,Other
+10721,Other
+10663,Other
+10698,Other
+10678,Other
+10681,Other
+10679,Other
+10697,Other
+10645,Other
+10612,Other
+10722,Other
+10723,Other
+10647,Other
+10585,Other
+10724,Other
+10693,Other
+10725,Other
+10673,Other
+10649,Other
+10729,Other
+10608,Other
+10694,Other
+10726,Other
+10730,Other
+10706,Other
+10682,Other
+10689,Other
+10684,Other
+10703,Other
+10666,Other
+10701,Other
+10586,Other
+10699,Other
+10705,Other
+10727,Other
+10731,Other
+10696,Other
+10704,Other
+10700,Other
+10732,Other
+10702,Other
+10733,Other
+10734,Other
+10735,Other
+10624,Other
+10736,Other
+10737,Other
+10602,Other
+10738,Other
+10739,Other
+10573,Other
+10664,Other
+10740,Other
+10741,Other
+10742,Other
+10743,Other
+10744,Other
+10575,Other
+10745,Other
+10746,Other
+10747,Other
+10632,Other
+10626,Other
+10640,Other
+10748,Other
+10749,Other
+10750,Other
+10751,Other
+10660,Other
+10752,Other
+10753,Other
+10754,Other
+10755,Other
+10591,Other
+10756,Other
+10617,Other
+10580,Other
+10757,Other
+10758,Other
+10651,Other
+10759,Other
+10760,Other
+10761,Other
+10762,Other
+10600,Other
+10763,Other
+10764,Other
+10765,Other
+10658,Other
+10628,Other
+10766,Other
+10767,Other
+10644,Other
+10768,Other
+10769,Other
+10770,Other
+10771,Other
+10772,Other
+10773,Other
+10774,Other
+10775,Other
+10638,Other
+10776,Other
+10777,Other
+10778,Other
+10581,Other
+10779,Other
+10780,Other
+10781,Other
+10782,Other
+10783,Other
+10784,Other
+10785,Other
+10786,Other
+10610,Other
+10787,Other
+10709,Other
+10788,Other
+10680,Other
+10607,Other
+10789,Other
+10790,Other
+10791,Other
+10792,Other
+10793,Other
+10621,Other
+10794,Other
+10615,Other
+10795,Other
+10796,Other
+10797,Other
+10798,Other
+10799,Other
+10800,Other
+10801,Other
+10802,Other
+10803,Other
+10804,Other
+10805,Other
+10596,Other
+10690,Other
+10806,Other
+10807,Other
+10808,Other
+10809,Other
+10623,Other
+10613,Other
+10810,Other
+10811,Other
+10812,Other
+10813,Other
+10814,Other
+10577,Other
+10815,Other
+10708,Other
+10816,Other
+10817,Other
+10818,Other
+10819,Other
+10609,Other
+10820,Other
+10821,Other
+10822,Other
+10823,Other
+10584,Other
+10824,Other
+10825,Other
+10826,Other
+10827,Other
+10828,Other
+10636,Other
+10652,Other
+10829,Other
+10661,Other
+10830,Other
+10587,Other
+10831,Other
+10832,Other
+10833,Other
+10834,Other
+10618,Other
+10835,Other
+10836,Other
+10837,Other
+10838,Other
+10839,Other
+10840,Other
+10841,Other
+10842,Other
+10843,Other
+10844,Other
+10845,Other
+10846,Other
+10847,Other
+10848,Other
+10849,Other
+10850,Other
+10657,Other
+10851,Other
+10656,Other
+10852,Other
+10853,Other
+10854,Other
+10855,Other
+10856,Other
+10619,Other
+10603,Other
+10627,Other
+10605,Other
+10606,Other
+10857,Other
+10620,Other
+10625,Other
+10629,Other
+10630,Other
+10858,Other
+10859,Other
+10860,Other
+10861,Other
+10862,Other
+10631,Other
+10863,Other
+10634,Other
+10635,Other
+10639,Other
+10662,Other
+10648,Other
+11174,Other
+10865,Other
+10866,Other
+10691,Other
+10707,Other
+10978,Other
+11175,Other
+10991,Other
+10998,Other
+11009,Other
+11016,Other
+11027,Other
+11029,Other
+11037,Other
+11038,Other
+11044,Other
+11046,Other
+11048,Other
+11054,Other
+11060,Other
+11067,Other
+11073,Other
+11096,Other
+11097,Other
+11117,Other
+11159,Other
+11166,Other
+11176,Other
+11189,Other
+11193,Other
+11203,Other
+11207,Other
+11213,Other
+11216,Other
+11221,Other
+11225,Other
+11228,Other
+11234,Other
+11236,Other
+11239,Other
+11240,Other
+11241,Other
+11242,Other
+11243,Other
+11244,Other
+11248,Other
+11252,Other
+11259,Other
+11263,Other
+11264,Other
+11265,Other
+11267,Other
+11268,Other
+11269,Other
+11270,Other
+11271,Other
+11272,Other
+11273,Other
+11274,Other
+11275,Other
+11276,Other
+11277,Other
+11278,Other
+11279,Other
+11280,Other
+11281,Other
+11282,Other
+11283,Other
+11284,Other
+11285,Other
+11289,Other
+11305,Other
+11308,Other
+11313,Other
+11327,Other
+11329,Other
+11337,Other
+11343,Other
+11344,Other
+11345,Other
+11346,Other
+11347,Other
+11348,Other
+11349,Other
+11350,Other
+11351,Other
+11352,Other
+11353,Other
+11354,Other
+11355,Other
+11356,Other
+11357,Other
+11358,Other
+11359,Other
+11360,Other
+11361,Other
+11362,Other
+11363,Other
+11364,Other
+11365,Other
+11366,Other
+11367,Other
+11368,Other
+11369,Other
+11370,Other
+11372,Other
+11374,Other
+11376,Other
+11375,Other
+11377,Other
+11378,Other
+11380,Other
+11381,Other
+11382,Other
+11383,Other
+11384,Other
+11385,Other
+11386,Other
+11387,Other
+11388,Other
+11389,Other
+11390,Other
+11391,Other
+11392,Other
+11393,Other
+11394,Other
+11395,Other
+11396,Other
+11397,Other
+11398,Other
+11399,Other
+11400,Other
+11401,Other
+11402,Other
+11403,Other
+11404,Other
+11405,Other
+11406,Other
+11407,Other
+11408,Other
+11409,Other
+11410,Other
+11411,Other
+11412,Other
+11413,Other
+11414,Other
+11415,Other
+11416,Other
+11417,Other
+11418,Other
+11419,Other
+11420,Other
+11427,Other
+11433,Other
+11434,Other
+11458,Other
+11468,Other
+11492,Other
+11493,Other
+10446,"Outer Ring Road"
+10296,"Pakhowal Road"
+11140,"Palakkad Central"
+11141,"Palakkad East"
+11139,"Palakkad South"
+11142,"Palakkad West"
+10473,Palitana
+10318,Palwal
+11290,"Palwal Sohna Road"
+11441,Palwalrural
+10230,Panchkula
+11323,"Panchkula Extension 2"
+10387,"Panipat North"
+11157,"Papari Road"
+11429,"Papari Road"
+10079,Paragpur
+10165,Parklands
+11177,"Pathanamthitta North"
+10459,"Patiala East"
+10458,"Patiala North"
+10457,"Patiala West"
+10121,"Patna Central"
+11432,"Patna South"
+10385,"Patna West"
+10246,"Paud Road"
+10244,PCMC
+11057,"Perambalur Central"
+11055,"Perambalur East"
+11058,"Perambalur North"
+11059,"Perambalur South"
+11056,"Perambalur West"
+10245,"Peth Area"
+11291,"Piprali Road"
+10125,"Pondicherry Central"
+10359,"Pondicherry North"
+10712,"Pondicherry South"
+11045,"Pudukkottai North"
+10170,"Pune Center"
+10568,"Pune Central"
+10055,"Pune East"
+10066,"Pune North"
+10248,"Pune Satara Road"
+10253,"Pune Solapur Highway"
+10076,"Pune South"
+10059,"Pune West"
+10109,"Puri Central"
+10375,"Puri North"
+10276,"Rae Bareli Road"
+10256,"Raigad North"
+10313,"Raigad South"
+10973,"Raipur Central"
+10713,"Raipur East"
+10972,"Raipur North"
+10970,"Raipur South"
+10971,"Raipur West"
+10219,"Rajendra Nagar"
+11086,"Rajkot Central"
+11087,"Rajkot East"
+11090,"Rajkot North"
+11089,"Rajkot South"
+11088,"Rajkot West"
+10073,"Rajpath Club"
+10130,"Ranchi Central"
+10339,"Ranchi East"
+10487,"Ranchi North"
+10488,"Ranchi South"
+11211,Ranikhet
+10432,"Ratnagiri Central"
+11191,"Ratnagiri East"
+10433,"Ratnagiri North"
+10434,"Ratnagiri South"
+10475,"Rayagada North"
+11158,"Rewari Narnaul Road"
+10485,"Rishikesh North"
+10467,"Rohtak Central"
+10468,"Rohtak East"
+10470,"Rohtak North"
+10471,"Rohtak South"
+10469,"Rohtak West"
+11250,"Saharanpur South"
+10193,Sahibabad
+10315,"Salem Central"
+10409,"Salem East"
+10314,"Salem North"
+10410,"Salem South"
+11301,"Sambalpur West"
+10077,Sanand1
+11333,"Sangli Central"
+11336,"Sangli North"
+11442,Sankhol
+10280,"Saputara Nashik Road"
+10442,"Sarjapur Road"
+11262,"Sarjapur Road Before Wipro"
+10341,"Satara Central"
+10342,"Satara North"
+10489,"Satara South"
+10490,"Satara West"
+11462,"Sector 5"
+11148,"Sector 5"
+11463,"Sector 54"
+11149,"Sector 6"
+11150,"Sector 7"
+11151,"Sector 8"
+11152,"Sector 9"
+10033,Secunderabad
+11118,"Sehore Central"
+11119,"Sehore East"
+11121,"Sehore North"
+11122,"Sehore South"
+11120,"Sehore West"
+10003,"SG Highway"
+10496,"Shahjahanpur Central"
+10495,"Shahjahanpur East"
+10498,"Shahjahanpur North"
+10499,"Shahjahanpur South"
+10497,"Shahjahanpur West"
+11261,"Sharanpur Road"
+10126,"Shimla Central"
+11237,"Shivamogga South"
+10396,"Shyana Road"
+11340,"Sikar North"
+11260,"Sikar South"
+10482,"Siliguri Central"
+11212,"Siliguri East"
+10184,"Silliguri North"
+11256,"Silliguri South"
+11247,"Sindhudurg Central"
+11010,"Sindhudurg South"
+10254,"Sinhagad Road"
+11187,"Sirhind Road"
+10517,"Sirsa North"
+10293,"Sitapur National Hwy"
+10207,Sohna
+10024,"Sohna Road"
+11440,"Sohna Rural"
+10510,"Solan North"
+10513,"Solan South"
+10380,"Solan West"
+10351,"Solapur Center"
+11422,"Solapur East"
+11258,"Solapur Mangalwedha Road"
+11326,"Solapur North"
+10358,"Solapur South"
+11423,"Solapur West"
+10169,"Sonepat Central"
+11479,"Sorkha Jahidabad"
+10180,"South City 1"
+10200,"South City 2"
+11472,"South Hyderabad"
+11473,"South West Delhi"
+10974,"Southern Peripheral Road"
+11298,"Srinagar South"
+11328,"SSB Road"
+10218,"State Highway 25"
+10331,Surajkund
+10116,"Surat Central"
+10355,"Surat East"
+10384,"Surat North"
+10347,"Surat South"
+10411,"Surat West"
+11456,"Surya Nagar"
+11467,Talasari
+10204,Tappal
+11332,"Tapukara Rewari Mega Highway"
+10048,Thane
+11436,Thanesar
+10443,"Thanisandra Main Road"
+11309,"Thanjavur East"
+11488,Tharamani
+11490,"Theni East"
+10462,"Thiruvannamalai Central"
+10463,"Thiruvannamalai East"
+10465,"Thiruvannamalai North"
+10466,"Thiruvannamalai South"
+10464,"Thiruvannamalai West"
+10340,"Thrissur Central"
+10343,"Thrissur East"
+10345,"Thrissur North"
+10377,"Thrissur South"
+10393,"Thrissur West"
+11047,Tindivanam
+10294,"Tirunelveli Central"
+10460,"Tirunelveli North"
+10461,"Tirunelveli South"
+10327,"Tirupati Central"
+11220,"Tirupati North"
+11218,"Tirupati South"
+11219,"Tirupati West"
+11028,"Tiruppur South"
+11138,"Tiruppur West"
+10122,"Trichy Central"
+10431,"Trichy East"
+10321,"Trichy North"
+10479,"Trichy South"
+10484,"Trichy West"
+10106,"Trivandrum Central"
+10554,"Trivandrum East"
+10319,"Trivandrum North"
+10407,"Trivandrum South"
+10551,"Trivandrum West"
+11068,"Tumakuru Central"
+11069,"Tumakuru East"
+11072,"Tumakuru North"
+11071,"Tumakuru South"
+11070,"Tumakuru West"
+11039,"Tuticorin Central"
+11040,"Tuticorin East"
+11042,"Tuticorin North"
+11043,"Tuticorin South"
+11041,"Tuticorin West"
+11106,"Udaipur Central"
+11102,"Udaipur East"
+11105,"Udaipur North"
+11104,"Udaipur South"
+11103,"Udaipur West"
+10494,"Udham Singh Nagar Central"
+10539,Udupi
+10531,"Udupi Central"
+10529,"Udupi North"
+10114,"Vadodara Central"
+10231,"Vadodara East"
+11255,"Vadodara Halol Road"
+10309,"Vadodara North"
+10269,"Vadodara South"
+10232,"Vadodara West"
+10209,Vaishali
+10440,"Valsad South"
+10266,"Vandalur Kelambakkam Road"
+10265,"Vandalur Road"
+10137,"Varanasi Central"
+10507,"Varanasi East"
+10452,"Varanasi North"
+10509,"Varanasi South"
+10508,"Varanasi West"
+10194,Vasundhara
+10131,"Vellore Central"
+10534,"Vellore East"
+10997,"Vellore South"
+11229,"Vijayapura East"
+11230,"Vijayapura West"
+10365,"Vijayawada Central"
+10514,"Vijayawada East"
+10369,"Vijayawada North"
+10138,"Vijayawada South"
+11172,"Vijayawada West"
+11294,"Villupuram North"
+10117,"Visakhapatnam Central"
+10310,"Visakhapatnam North"
+10366,"Visakhapatnam West"
+10178,"Wadala Pathardi Road"
+10325,"Warangal Central"
+11286,"Wayanad South"
+10176,"West Delhi"
+11306,"West Godavari South"
+11312,"West Godavari West"
+10512,Whitefield
+10299,"Worli to Andheri"
+10052,"Yamuna Expressway"
+11198,"Yamuna Expressway"
+11080,"Yamuna Expressway"
+11320,"Zirakpur Panchkula Kalka Highway"
+11322,"Zirakpur Panchkula Kalka Hwy"

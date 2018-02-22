@@ -89,9 +89,9 @@
       get_results_inx = get_results_inx + 1;
       var search_session = this;
       $.ajax({
-        url: 'http://localhost:3000/test/api',
+        url: 'http://localhost:3000/post_text',
         data: {'text' : search_session.get_combined_text(), 'results' : results},
-        type: 'get',
+        type: 'post',
         success: function(ret_data){
           if(ret_data.status == "missing_fields"){
             search_session.add_system_text("Some of the fields are missing");
