@@ -6,7 +6,10 @@ module FiltersHelper
   INDEX_NAME = "polygon_index"
   INDEX_TYPE = "polygons"
 
-  ## not used anymore
+  MAKAAN_INDEX_NAME = "makaan_polygon_index"
+  MAKAAN_INDEX_TYPE = "polygons"
+
+  ## not used for now
   def polygons_filter(text)
     localities_data, cities_data = [], []
     CSV.foreach("tmp/polygons_data_dump.csv", headers: true) do |row|
@@ -22,7 +25,7 @@ module FiltersHelper
     localities_data, cities_data = [], []
 
     query = get_es_query(words)
-    poly_results = get_poly_results_from_es(query)
+    poly_results = get_poly_results_from_es(query, INDEX_NAME, INDEX_TYPE)
     
     hits = poly_results["hits"]["hits"]
     if hits.empty?
@@ -34,6 +37,20 @@ module FiltersHelper
        (hit["city_uuid"].nil? or hit["uuid"] == hit["city_uuid"]) ? cities_data << required_data : localities_data << required_data
       end
       return localities_data, cities_data 
+    end
+  end
+
+  def get_makaan_relevant_polygons(words)
+    localities_data = {}
+
+    query = get_es_query(words)
+    poly_results = get_poly_results_from_es(query, MAKAAN_INDEX_NAME, MAKAAN_INDEX_TYPE)
+    
+    hits = poly_results["hits"]["hits"]
+    if hits.empty?
+      return localities_data
+    else
+      return hits.first["_source"]
     end
   end
 
@@ -51,9 +68,9 @@ module FiltersHelper
     }.to_json
   end
 
-  def get_poly_results_from_es(query)
+  def get_poly_results_from_es(query, index_name, index_type)
     client = ExternalApiHelper.get_client
-    return ExternalApiHelper.get_results_from_es(client, INDEX_NAME, INDEX_TYPE, query)
+    return ExternalApiHelper.get_results_from_es(client, index_name, index_type, query)
   end
 
   def get_filter_poly_uuids(words)
