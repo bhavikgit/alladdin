@@ -28,4 +28,17 @@ module ExternalApiHelper
     return code, response.body
   end
 
+  def self.get_client
+    client = ::Elasticsearch::Client.new(
+      :hosts => [{
+        :host=> "localhost",
+        :port=> "9200"
+      }]
+    )
+  end
+
+  def self.get_results_from_es(client, index_name, index_type, body)
+    client.search :index => index_name,:type => index_type,:body => body
+  end
+
 end

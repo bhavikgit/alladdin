@@ -3,7 +3,7 @@ module FilterDictionaryHelper
     "1 RK" => 1,
     "2 BHK" => 2,
     "3 BHK" => 3,
-    "3+ BHK" => 5,
+    "3+BHK" => 5,
     "Plot" => 54
   }
 
