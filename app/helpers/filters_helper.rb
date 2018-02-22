@@ -98,13 +98,15 @@ module FiltersHelper
   def prepare_response(result)
     response = {
       sound_file_to_play: process_and_get_sound_file(result[:message]),
-      text_to_display: result[:message],
-      results: get_search_urls(result[:data])
+      text_to_display: result[:message]
     }
     if result[:message] == ""
       response[:status] = "success"
+      response[:text_to_display] = "Please wait , we are looking for results"
+      response[:results] =  get_search_urls(result[:data])
     else
       response[:status] = "missing_fields"
+      response[:results] = []
     end
     return response
   end
