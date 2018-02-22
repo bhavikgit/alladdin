@@ -34,11 +34,14 @@ class FiltersController < ApplicationController
     end
     result[:original_text] = original_text
     result[:location_tokens] = location_tokens
-    limit= max_amount(original_text)
-
-    result[:upper_limit] = limit
-    render :json=>result.to_json
-    # identify the keywords and hit one method to check if it has mandatory filters
+    result[:housing_locality_data], result[:housing_city_uuid] = get_filter_poly_uuids(location_tokens)
+    result[:makaan_locality_data] = get_makaan_relevant_polygons(token_tokens)
+    if result[:housing_city_uuid].nil? and result[:makaan_locality_data].empty?
+      result[:message] = "Please mention the city you are looking in"
+    end
+    result[:max_price] = max_amount(original_text)
+    response = prepare_response(result)
+    render :json=>response.to_json
   end
 
   def normalize(str)

@@ -95,4 +95,23 @@ module FiltersHelper
     return property_type_hash
   end
 
+  def prepare_response(result)
+    response = {
+      sound_file_to_play: process_and_get_sound_file(result[:message]),
+      text_to_display: result[:message],
+      results: get_search_urls(result[:data])
+    }
+    if result[:message] == ""
+      response[:status] = "success"
+    else
+      response[:status] = "missing_fields"
+    end
+    return response
+  end
+
+  def process_and_get_sound_file(message)
+    ## naresh/sajan to modify this
+    return ""
+  end
+
 end
